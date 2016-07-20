@@ -66,16 +66,12 @@ tools:context=".MainActivity" >
         <!-- To display picture taken -->
         <ImageView
             android:id="@+id/imgPreview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
             />
 
         <!-- To preview video recorded -->
-        <VideoView
-            android:id="@+id/videoPreview"
-            android:layout_width="wrap_content"
-            android:layout_height="400dp"
-             />
     </LinearLayout>
 
     <!-- To preview video recorded -->

@@ -42,9 +42,10 @@
 
         <ImageView
             android:id="@+id/imgPreview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone" />
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_below="@+id/textView"
+            android:layout_above="@+id/btnCapturePicture" />
 
         <!-- To preview video recorded -->
     </RelativeLayout>

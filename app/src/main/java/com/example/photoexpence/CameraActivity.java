@@ -4,10 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Picture;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.v7.app.AppCompatActivity;
+//import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -41,6 +42,7 @@ public class CameraActivity extends Activity {
         setContentView(R.layout.activity_camera);
 
         btnTakePhoto = (Button) findViewById(R.id.btnCapturePicture);
+        imgPreview = (ImageView)findViewById(R.id.imgPreview);
         btnTakePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -152,7 +154,35 @@ public class CameraActivity extends Activity {
      * Display image from a path to ImageView
      */
     private void previewCapturedImage() {
+
         try {
+            // hide video preview
+
+
+            imgPreview.setVisibility(View.VISIBLE);
+
+            // bimatp factory
+            BitmapFactory.Options options = new BitmapFactory.Options();
+
+            // downsizing image as it throws OutOfMemory Exception for larger
+            // images
+            options.inSampleSize = 8;
+
+             Bitmap bitmap = BitmapFactory.decodeFile(fileUri.getPath(),
+                    options);
+
+           // bitmap.setHeight(400);
+            //bitmap.setWidth(400);
+
+
+
+            imgPreview.setImageBitmap(Bitmap.createScaledBitmap(bitmap, 1000, 1000, false));
+            //.setImageBitmap(bitmap);
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
+
+        /*try {
             // hide video preview
 
 
@@ -171,7 +201,7 @@ public class CameraActivity extends Activity {
             imgPreview.setImageBitmap(bitmap);
         } catch (NullPointerException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
     /*
