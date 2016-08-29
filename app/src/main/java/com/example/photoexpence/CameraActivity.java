@@ -166,7 +166,7 @@ public class CameraActivity extends Activity {
 
             // downsizing image as it throws OutOfMemory Exception for larger
             // images
-            options.inSampleSize = 8;
+            options.inSampleSize = 2;
 
              Bitmap bitmap = BitmapFactory.decodeFile(fileUri.getPath(),
                     options);

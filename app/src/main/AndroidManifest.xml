@@ -25,6 +25,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".CameraActivity"></activity>
+        <activity android:name=".ViewImage"></activity>
     </application>
 
 </manifest>
