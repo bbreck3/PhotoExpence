@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="unspecified"><source path="D:\workspace_Android\PhotoExpence\tess-two-test\build\intermediates\exploded-aar\PhotoExpence\tess-two\unspecified\assets"/></dataSet><dataSet config="main"><source path="D:\workspace_Android\PhotoExpence\tess-two-test\src\main\assets"/><source path="D:\workspace_Android\PhotoExpence\tess-two-test\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\workspace_Android\PhotoExpence\tess-two-test\src\debug\assets"/></dataSet></merger>
